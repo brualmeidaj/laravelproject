@@ -16,11 +16,16 @@ class SeriesController extends Controller
             'Grey\'s Anatomy'
         ];
 
-        return view('listar-series', [
-            'series' => $series
-        ]);
+        return view('series.index')
+        ->with('series', $series);
 
     }
+
+    public function create()
+    {
+        return view('series.create');
+    }
+
 }
 
 
